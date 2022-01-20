@@ -74,3 +74,4 @@ class LSTM_CRF(nn.Module):
         mask = self.get_mask(length_list)
 
         return self.crf.decode(out, mask)
+
