@@ -27,8 +27,8 @@ def read_data(path, length):
                 sentence_labels.append(res[3])
 
         if sentence:            # 防止最后一行没有空白行，导致最后一句话录入不到
-            sentences_list.append(sentence)
-            sentences_list_labels.append(sentence_labels)
+            sentences_list.append(' '.join(sentence))
+            sentences_list_labels.append(' '.join(sentence_labels))
     return sentences_list[:length], sentences_list_labels[:length]
 
 def build_vocab(sentences_list):
